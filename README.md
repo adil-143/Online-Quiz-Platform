@@ -36,3 +36,28 @@ The platform allows users to take timed quizzes, view results and history, while
 
 ## 📂 Project Structure
 
+
+
+
+---
+
+## 🧠 Performance-Based Personalization
+
+The system adapts quiz difficulty based on a user’s past performance:
+
+- **Average score < 40% → Easy**
+- **Average score 40% – 70% → Medium**
+- **Average score > 70% → Hard**
+
+This makes the quiz experience adaptive and user-focused.
+
+---
+
+## 🗄️ Database Design
+
+### Users Table
+```sql
+users(id, name, email, password)
+questions(id, question, option_a, option_b, option_c, option_d, correct_option, difficulty)
+results(id, user_id, score, total, created_at)
+
