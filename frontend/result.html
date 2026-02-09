@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result | Online Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Quiz Result</h1>
+
+    <h2 id="scoreText"></h2>
+
+    <button onclick="viewHistory()">View History</button>
+    <button onclick="goToQuiz()">Take Quiz Again</button>
+
+  </div>
+
+  <script>
+    const score = localStorage.getItem("score");
+    const total = localStorage.getItem("total");
+
+    document.getElementById("scoreText").innerText =
+      `Your Score: ${score} / ${total}`;
+
+    function viewHistory() {
+      window.location.href = "history.html";
+    }
+
+    function goToQuiz() {
+      window.location.href = "quiz.html";
+    }
+  </script>
+
+</body>
+</html>

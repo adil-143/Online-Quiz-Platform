@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | Online Quiz</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Online Quiz Platform</h1>
+
+    <!-- LOGIN SECTION -->
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+
+    <hr style="margin: 20px 0;">
+
+    <!-- REGISTER SECTION -->
+    <h2>Register</h2>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="regEmail" placeholder="Email" required>
+    <input type="password" id="regPassword" placeholder="Password" required>
+    <button onclick="register()">Register</button>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
