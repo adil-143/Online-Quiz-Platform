@@ -36,7 +36,36 @@ The platform allows users to take timed quizzes, view results and history, while
 
 ## 📂 Project Structure
 
-
+Advance Quiz Platform/ <br>
+│<br>
+├── frontend/<br>
+│ ├── index.html # Login & Registration<br>
+│ ├── quiz.html # Quiz page<br>
+│ ├── result.html # Result page<br>
+│ ├── history.html # Quiz history<br>
+│ ├── admin.html # Admin panel<br>
+│ ├── css/<br>
+│ │ └── style.css # Styling<br>
+│ └── js/<br>
+│ ├── auth.js<br>
+│ ├── quiz.js<br>
+│ ├── history.js<br>
+│ └── admin.js<br>
+│<br>
+├── backend/<br>
+│ ├── server.js # Express server<br>
+│ ├── db.js # MySQL connection<br>
+│ ├── routes/<br>
+│ │ ├── authRoutes.js<br>
+│ │ ├── quizRoutes.js<br>
+│ │ ├── resultRoutes.js<br>
+│ │ └── adminRoutes.js<br>
+│ └── logic/<br>
+│ └── personalization.js<br>
+│<br>
+├── screenshots/ # Project screenshots<br>
+│<br>
+└── README.md<br>
 
 
 ---
@@ -58,6 +87,14 @@ This makes the quiz experience adaptive and user-focused.
 ### Users Table
 ```sql
 users(id, name, email, password)
-questions(id, question, option_a, option_b, option_c, option_d, correct_option, difficulty)
-results(id, user_id, score, total, created_at)
+```
 
+### Questions Table
+```sql
+questions(id, question, option_a, option_b, option_c, option_d, correct_option, difficulty)
+```
+
+### Result Table
+```sql
+results(id, user_id, score, total, created_at)
+```
